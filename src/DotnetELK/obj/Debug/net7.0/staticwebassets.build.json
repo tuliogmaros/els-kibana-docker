@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "+zA3y/6pVn4Z/B/eZA6tZ0J6elFxhD8IeP9hOYbVWTA=",
+  "Source": "DotnetELK",
+  "BasePath": "_content/DotnetELK",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
