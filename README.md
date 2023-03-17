@@ -1,7 +1,7 @@
 # <h3> ElasticSearch With Kibana -- Using Docker
 
 
-Basic application, but with the basic principles of elasticsearch configuration w/ kibana using docker.
+Basic application including basic principles of elasticsearch w/ kibana using docker.
 
 The most important settings are available from Program.cs
 
