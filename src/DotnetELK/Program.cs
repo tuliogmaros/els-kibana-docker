@@ -1,3 +1,4 @@
+using System.Reflection;
 using Serilog;
 using Serilog.Exceptions;
 using Serilog.Sinks.Elasticsearch;
@@ -48,12 +49,12 @@ void ConfigureLogs()
     .CreateLogger();
 }
 
-ElasticsearchSinkOptions ConfigureELS(IConfigurationRoot configuration, object environment)
+ElasticsearchSinkOptions ConfigureELS(IConfigurationRoot configuration, string env)
 {
     return new ElasticsearchSinkOptions(new Uri(configuration["ELKConfiguration:Uri"]))
     {
         AutoRegisterTemplate = true,
-        IndexFormat = $"DotnetELK"
+        IndexFormat = $"{Assembly.GetExecutingAssembly().GetName().Name.ToLower()}-{env?.ToLower().Replace(".","-")}-{DateTime.UtcNow:yyyy-MM}"
     };
 }
 
